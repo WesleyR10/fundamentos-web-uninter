@@ -1,0 +1,166 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  background: url(./Menu.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: white;
+  width: 100%;
+}
+
+header {
+  color: white;
+  padding: 20px 0;
+
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+main {
+  .container {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form {
+    gap: 10px;
+  }
+
+  .home {
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      img {
+        width: 30px !important;
+        height: 30px !important;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 10px;
+        color: white;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .flex-wrapper {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .sobre {
+    max-width: 500px;
+    line-height: 1.5;
+
+    .hobbies {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style-type: none;
+    }
+  }
+
+  .contact {
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input,
+    textarea {
+      width: 320px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  }
+
+  .formacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .formacao-item {
+      display: flex;
+      flex-direction: column;
+      
+      border: 1px solid white;
+      padding: 10px;
+      border-radius: 10px;
+
+      width: 500px;
+      line-height: 0.5;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #333;
+  color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
